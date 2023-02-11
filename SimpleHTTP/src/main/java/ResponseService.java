@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,6 +15,7 @@ public class ResponseService {
         throws IOException {
         RequestMethod requestMethod = new RequestMethod();
         String firstLine = bufferedReader.readLine();
+        System.out.println("firstLine = " + firstLine);
         String[] firstLineArray = firstLine.split(" ");
         requestMethod.setMethod(firstLineArray[0]);
         String requestTypeAndTextId = firstLineArray[1].substring(1, firstLineArray[1].length());
