@@ -96,14 +96,15 @@ public class ResponseService {
         dataOutputStream.flush();
     }
 
-    public void sendResponseFromGETAndText(DataOutputStream dataOutputStream, RequestMethod requestMethod,
-                                           String storageString) throws IOException {
+    public void sendResponseFromGETAndText(DataOutputStream dataOutputStream,
+        RequestMethod requestMethod, String storageString) throws IOException {
         String textId = requestMethod.getTextId();
         if (textId == null) {
             dataOutputStream.writeBytes(ResponseStateCode.response404NotFound.getStateMessage());
         } else {
             if (storageString == null) {
-                dataOutputStream.writeBytes(ResponseStateCode.response404NotFound.getStateMessage());
+                dataOutputStream.writeBytes(
+                    ResponseStateCode.response404NotFound.getStateMessage());
             } else {
                 dataOutputStream.writeBytes(ResponseStateCode.response200OK.getStateMessage());
                 dataOutputStream.writeBytes(storageString);
@@ -112,8 +113,8 @@ public class ResponseService {
         }
     }
 
-    public void responseFromPostAndText(TreatStateCode treatStateCode, DataOutputStream dataOutputStream)
-        throws IOException {
+    public void responseFromPostAndText(TreatStateCode treatStateCode,
+        DataOutputStream dataOutputStream) throws IOException {
         if (treatStateCode == TreatStateCode.SUCCESS) {
             dataOutputStream.writeBytes(ResponseStateCode.response201Created.getStateMessage());
         } else if (treatStateCode == TreatStateCode.FAIL) {

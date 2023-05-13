@@ -1,31 +1,35 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class RequestHandler implements Runnable {
 
-    private Socket connection;
-    private ResponseService responseService = new ResponseService();
-    private RequestTool requestTool = new RequestTool();
+    private final Socket socket;
+    private final ResponseService responseService = new ResponseService();
+    private final RequestTool requestTool = new RequestTool();
 
-    public RequestHandler(Socket connection) {
-        this.connection = connection;
+    public RequestHandler(Socket socket) {
+        this.socket = socket;
     }
 
     @Override
     public void run() {
-        try (InputStream inputStream = connection.getInputStream();
-            OutputStream outputStream = connection.getOutputStream()) {
+        try (InputStream inputStream = socket.getInputStream();
+            OutputStream outputStream = socket.getOutputStream()) {
 
             BufferedReader bufferedReader = new BufferedReader(
-                new InputStreamReader(inputStream, "UTF-8"));
+                new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
             RequestMethod requestMethod = responseService.readFirstLIneAndImplementRequestMethod(
                 bufferedReader);
             System.out.println(requestMethod.toString());
-
             switch (requestMethod.getMethod()) {
                 case "GET":
                     switch (requestMethod.getRequestType()) {
