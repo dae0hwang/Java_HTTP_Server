@@ -39,3 +39,12 @@ ServerSocket과 Runnable Thread를 사용하여 여러 웹 브라우저가 접�
 <img width="70%" src="https://blog.kakaocdn.net/dn/c8OuM5/btsfjIJ4tyZ/X1YJLKxgbo7SFpHLLXlJL1/img.gif">
 
 [동작 로직 설명](https://coding-business.tistory.com/125#serversocket%EC%9C%BC%EB%A1%9C-httpserver-%EC%97%B4%EA%B8%B0)
+
+서버를 연 이후 [HTTP Reqeust Message를 분석](https://coding-business.tistory.com/125#client-request-message-%EB%B6%84%EC%84%9D%ED%95%98%EA%B8%B0)하고
+
+
+[Response Message 형식에 맞춰 메세지 전달](https://coding-business.tistory.com/125#response-message-%EA%B5%AC%EC%A1%B0%EB%8C%80%EB%A1%9C-%EB%B0%98%ED%99%98%ED%95%98%EA%B8%B0) 하여 웹브라우저와 통신 가능한 서버를 구현했다.
+# GET /time -> 현재 시간을 json 에 담아서 알려줌
+요청이 GET/time일 경우 현재 시간 message body json 형시으로 제공한다.
+
+<img width="70%" src="https://blog.kakaocdn.net/dn/bTtT3i/btsfcMNMbKC/dK8Z6IueKUrsqxtvMtNraK/img.gif">
