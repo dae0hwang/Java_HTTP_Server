@@ -45,6 +45,44 @@ ServerSocket과 Runnable Thread를 사용하여 여러 웹 브라우저가 접�
 
 [Response Message 형식에 맞춰 메세지 전달](https://coding-business.tistory.com/125#response-message-%EA%B5%AC%EC%A1%B0%EB%8C%80%EB%A1%9C-%EB%B0%98%ED%99%98%ED%95%98%EA%B8%B0) 하여 웹브라우저와 통신 가능한 서버를 구현했다.
 # GET /time -> 현재 시간을 json 에 담아서 알려줌
-요청이 GET/time일 경우 현재 시간 message body json 형시으로 제공한다.
+요청이 GET/time일 경우 현재 시간 message body json 형식으로 제공한다.
 
 <img width="70%" src="https://blog.kakaocdn.net/dn/bTtT3i/btsfcMNMbKC/dK8Z6IueKUrsqxtvMtNraK/img.gif">
+
+[동작 로직 설명](https://coding-business.tistory.com/125#1.-get-/time--%3E-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84%EC%9D%84-json-%EC%97%90-%EB%8B%B4%EC%95%84%EC%84%9C-%EC%95%8C%EB%A0%A4%EC%A4%8C)
+
+# POST /text/{textid} -> Body로 전달된 문자열을 서버가 저장
+요청이 POST /text/{textid}일 경우 path parameter를 분석하여 해당 아이디에 맞는 body 데이터를 서버에 저장한다
+
+<img width="70%" src="https://blog.kakaocdn.net/dn/bpzf8f/btsfaJKWsYv/v1ZMG6ecRs3uhSperIM6w0/img.gif">
+
+[동작 로직 설명](https://coding-business.tistory.com/125#2.-post-/text/{textid}--%3E-body%EB%A1%9C-%EC%A0%84%EB%8B%AC%EB%90%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%84%9C%EB%B2%84%EA%B0%80-%EC%A0%80%EC%9E%A5)
+
+# GET /text/{textid} -> 저장된 문자열을 알려줌
+요청이 GET /text/{textid}일 경우 path parameter를 분석하여 해당 아이디로 저장한 데이터를 Response로 제공한다.
+
+<img width="70%" src="https://blog.kakaocdn.net/dn/VtVQz/btse93v9xsD/M3AvcCK1gkfWHyOpcqPZ61/img.gif">
+
+[동작 로직 설명](https://coding-business.tistory.com/125#3.-get-/text/{textid}--%3E-%EC%A0%80%EC%9E%A5%EB%90%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%95%8C%EB%A0%A4%EC%A4%8C)
+
+# DELETE /text/{textid} -> 저장된 문자열을 삭제
+요청이 DELETE /text/{textid}일 경우 path parameter를 분석하여 해당 아이디로 저장한 데이터를 삭제한다
+
+<img width="70%" src="https://blog.kakaocdn.net/dn/FU6Zs/btsfehfp2vp/kNz1a9K5BWx3LrbuxXEnJ1/img.gif">
+
+[동작 로직 설명](https://coding-business.tistory.com/125#4.-delete-/text/{textid}--%3E-%EC%A0%80%EC%9E%A5%EB%90%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%82%AD%EC%A0%9C)
+
+# GET /image -> jpeg 이미지를 다운로드
+요청이 GET /image -> jpeg일 경우 path parameter를 분석하여 해당 아이디로 저장한 데이터를 삭제한다
+
+<img width="70%" src="https://blog.kakaocdn.net/dn/QARC1/btsfe6Lu10L/BcBx1428cZk0RKX0y4BEw0/img.gif">
+
+[동작 로직 설명](https://coding-business.tistory.com/125#5.-get-/image--%3E-jpeg-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)
+
+
+
+
+
+
+
+
