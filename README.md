@@ -73,7 +73,7 @@ ServerSocket과 Runnable Thread를 사용하여 여러 웹 브라우저가 접�
 [동작 로직 설명](https://coding-business.tistory.com/125#4.-delete-/text/{textid}--%3E-%EC%A0%80%EC%9E%A5%EB%90%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%82%AD%EC%A0%9C)
 
 ## GET /image -> jpeg 이미지를 다운로드
-요청이 GET /image -> jpeg일 경우 path parameter를 분석하여 해당 아이디로 저장한 데이터를 삭제한다
+요청이 GET /image -> jpeg일 경우 서버가 가지고 있는 이미지를 전달한다.
 
 <img width="70%" src="https://blog.kakaocdn.net/dn/QARC1/btsfe6Lu10L/BcBx1428cZk0RKX0y4BEw0/img.gif">
 
