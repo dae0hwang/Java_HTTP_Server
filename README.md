@@ -2,7 +2,7 @@
 자바에서 제공하는 httpserver 클래스 사용 없이 HTTP 프로토콜을 사용하는 웹서버를 ServerSocket만 사용하여 웹서버를 구현했습니다.
 
 서버를 구현하기 위해서는 client가 보내오는 Request Message 구조를 이해하고 분석하여 원하는 동작을 얻어야 하며 Response Message 구조에 맞춰서 구성하여 Client에게 보내는 로직을 작성해야 합니다.
-HttpServer 클래스를 사용하는 것보다 불편하지만 HTTP 프로토콜을 직접 구현하면서 HTTP 동작 원리 이해를 넓히는 시간이었습니다.
+HttpServer 클래스를 사용하는 것보다 불편하지만 HTTP 프로토콜을 직접 구현하면서 HTTP 동작 원리 이해를 넓히는 프로젝트였습니다.
 
 ### 서버가 제공하는 동작
 -   ServerSocket으로 HTTP WEB 서버 구현
