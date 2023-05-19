@@ -19,7 +19,7 @@ HttpServer 클래스를 사용하는 것보다 불편하지만 HTTP 프로토콜
 # 블로그 포스트
 [Java로 직접 구현하는 HTTP Server](https://coding-business.tistory.com/125)
 
-&nbsp;&nbsp;&nbsp;[HTTP 서버를 편리하게 만들 수 있는 HttpServlet 이해와 사용법](https://coding-business.tistory.com/126)
+&nbsp;&nbsp;&nbsp;&nbsp;[HTTP 서버를 편리하게 만들 수 있는 HttpServlet 이해와 사용법](https://coding-business.tistory.com/126)
 
 **<HTTP 와 웹브라우저 이해>** 
 
