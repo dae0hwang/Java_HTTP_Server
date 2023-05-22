@@ -37,7 +37,7 @@ HttpServer 클래스를 사용하는 것보다 불편하지만 HTTP 프로토콜
 ### 1. ServerSocket으로 HTTPServer 열기
 ServerSocket과 Runnable Thread를 사용하여 여러 웹 브라우저가 접속하는 HTTP WEBServer를 구현했습니다.
 
-<img width="70%" src="https://blog.kakaocdn.net/dn/c8OuM5/btsfjIJ4tyZ/X1YJLKxgbo7SFpHLLXlJL1/img.gif">
+<img width="90%" src="https://blog.kakaocdn.net/dn/c8OuM5/btsfjIJ4tyZ/X1YJLKxgbo7SFpHLLXlJL1/img.gif">
 
 [동작 로직 설명](https://coding-business.tistory.com/125#serversocket%EC%9C%BC%EB%A1%9C-httpserver-%EC%97%B4%EA%B8%B0)
 
@@ -48,7 +48,7 @@ ServerSocket과 Runnable Thread를 사용하여 여러 웹 브라우저가 접�
 ### 2. GET /time -> 현재 시간을 json 에 담아서 알려줌
 요청이 GET/time일 경우 현재 시간 message body json 형식으로 제공합니다.
 
-<img width="70%" src="https://blog.kakaocdn.net/dn/bTtT3i/btsfcMNMbKC/dK8Z6IueKUrsqxtvMtNraK/img.gif">
+<img width="90%" src="https://blog.kakaocdn.net/dn/bTtT3i/btsfcMNMbKC/dK8Z6IueKUrsqxtvMtNraK/img.gif">
 
 [동작 로직 설명](https://coding-business.tistory.com/125#1.-get-/time--%3E-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84%EC%9D%84-json-%EC%97%90-%EB%8B%B4%EC%95%84%EC%84%9C-%EC%95%8C%EB%A0%A4%EC%A4%8C)
 
@@ -62,21 +62,21 @@ ServerSocket과 Runnable Thread를 사용하여 여러 웹 브라우저가 접�
 ### 4. GET /text/{textid} -> 저장된 문자열을 알려줌
 요청이 GET /text/{textid}일 경우 path parameter를 분석하여 해당 아이디로 저장한 데이터를 Response로 제공합니다.
 
-<img width="70%" src="https://blog.kakaocdn.net/dn/VtVQz/btse93v9xsD/M3AvcCK1gkfWHyOpcqPZ61/img.gif">
+<img width="90%" src="https://blog.kakaocdn.net/dn/VtVQz/btse93v9xsD/M3AvcCK1gkfWHyOpcqPZ61/img.gif">
 
 [동작 로직 설명](https://coding-business.tistory.com/125#3.-get-/text/{textid}--%3E-%EC%A0%80%EC%9E%A5%EB%90%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%95%8C%EB%A0%A4%EC%A4%8C)
 
 ### 5. DELETE /text/{textid} -> 저장된 문자열을 삭제
 요청이 DELETE /text/{textid}일 경우 path parameter를 분석하여 해당 아이디로 저장한 데이터를 삭제합니다.
 
-<img width="70%" src="https://blog.kakaocdn.net/dn/FU6Zs/btsfehfp2vp/kNz1a9K5BWx3LrbuxXEnJ1/img.gif">
+<img width="90%" src="https://blog.kakaocdn.net/dn/FU6Zs/btsfehfp2vp/kNz1a9K5BWx3LrbuxXEnJ1/img.gif">
 
 [동작 로직 설명](https://coding-business.tistory.com/125#4.-delete-/text/{textid}--%3E-%EC%A0%80%EC%9E%A5%EB%90%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EC%82%AD%EC%A0%9C)
 
 ### 6. GET /image -> jpeg 이미지를 다운로드
 요청이 GET /image -> jpeg일 경우 서버가 가지고 있는 이미지를 전달합니다.
 
-<img width="70%" src="https://blog.kakaocdn.net/dn/QARC1/btsfe6Lu10L/BcBx1428cZk0RKX0y4BEw0/img.gif">
+<img width="90%" src="https://blog.kakaocdn.net/dn/QARC1/btsfe6Lu10L/BcBx1428cZk0RKX0y4BEw0/img.gif">
 
 [동작 로직 설명](https://coding-business.tistory.com/125#5.-get-/image--%3E-jpeg-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)
 
