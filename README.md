@@ -1,8 +1,6 @@
 # 자바로 직접 구현하는 HTTP Server
 스프링 프레임워크를 사용하지 않고, Java로 크롬 브라우저와 통신할 수 있는 HTTP 프로토콜 서버를 구현하였습니다.
 
-httpservlet 사용한 코드보다 불편하지만, HTTP 프로토콜에 대한 이해를 넓힐 수 있었습니다. 
-
 ### 서버가 제공하는 동작
 -   ServerSocket으로 HTTP WEB 서버 구현
     -   Client Request Message 분석하여 원하는 동작 파악
